@@ -1,6 +1,6 @@
-# eCWT RPA prod
+# eCWT
 
-Automating google drive upload
+
 
 ## Getting started
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/zmcho/ecwt-rpa-prod.git
+git remote add origin https://gitlab.com/zmcho/ecwt.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/zmcho/ecwt-rpa-prod/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/zmcho/ecwt/-/settings/integrations)
 
 ## Collaborate with your team
 
