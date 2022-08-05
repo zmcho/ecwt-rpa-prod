@@ -12,10 +12,23 @@ import time
 from datetime import datetime
 from tkinter import *
 
-# TO EDIT
-computer_name = 'Snow'
-chrome_profile = 'Profile 5'
-
+######################TO EDIT###########################################
+chrome_path = r'user-data-dir=C:\Users\Snow\AppData\Local\Google\Chrome\User Data'
+chrome_profile = '--profile-directory=Profile 5'
+##Google Drive###
+januaryid = '1y1g2H2XHSjhkFFGpQaNpTQ_vwBb9blrI'
+februaryid = '1fA7egtwsI4ldtIOuPxZ_H9P7NzSOZ1jS'
+marchid = '1A7oYNgBP2BSaPBWXnG4qRpAf1B49fNhm'
+aprilid = '1FTpLiSi7OC5l-IvhDBwwMY60RUdT3yRW'
+mayid = '1iAZEbg_ynGKB6jch8iRvKaMBgrEY0jF7'
+juneid = '1EH06vdzs3VeLPmEbZUMakYl2sGT8EE9z'
+julyid = '1DLvEG8Uz1yP56SEUi28rDzeDPGaaUdtg'
+augustid = '1uU3XKt05whmSY0OgTtS6Z1dAGMLCtLID'
+septemberid = '1VnBupVcr2-WCa4O9noxiMCFKeuA3F5_q'
+octoberid = '17UR_zrbVYuROj1CAbpRvg8WD9AuMC26C'
+novemberid = '1fekjbT25drRuRy_2F0nUZbIjwWGZsYtJ'
+decemberid = '1yJ_5BGZRq1cw3Ihx48TxpiX77w--yFkO'
+########################################################################
 month = []
 year = []
 date = datetime.now()
@@ -139,8 +152,8 @@ url = 'https://globetelecominc-tst.outsystemsenterprise.com/eCWT_Portal/Login_SS
 
 options = Options()
 options.add_experimental_option("detach", True)
-options.add_argument(r'user-data-dir=C:\Users\Snow\AppData\Local\Google\Chrome\User Data')
-options.add_argument('--profile-directory=Profile 5')
+options.add_argument(chrome_path)
+options.add_argument(chrome_profile)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get(url)
 
@@ -185,29 +198,29 @@ while loop != len(month):
     driver.implicitly_wait(60)
     driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').clear()
     if mnum == 1:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1y1g2H2XHSjhkFFGpQaNpTQ_vwBb9blrI")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(januaryid)
     elif mnum == 2:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1fA7egtwsI4ldtIOuPxZ_H9P7NzSOZ1jS")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(februaryid)
     elif mnum == 3:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1A7oYNgBP2BSaPBWXnG4qRpAf1B49fNhm")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(marchid)
     elif mnum == 4:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1FTpLiSi7OC5l-IvhDBwwMY60RUdT3yRW")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(aprilid)
     elif mnum == 5:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1iAZEbg_ynGKB6jch8iRvKaMBgrEY0jF7")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(mayid)
     elif mnum == 6:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1EH06vdzs3VeLPmEbZUMakYl2sGT8EE9z")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(juneid)
     elif mnum == 7:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1DLvEG8Uz1yP56SEUi28rDzeDPGaaUdtg")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(julyid)
     elif mnum == 8:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1uU3XKt05whmSY0OgTtS6Z1dAGMLCtLID")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(augustid)
     elif mnum == 9:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1VnBupVcr2-WCa4O9noxiMCFKeuA3F5_q")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(septemberid)
     elif mnum == 10:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("17UR_zrbVYuROj1CAbpRvg8WD9AuMC26C")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(octoberid)
     elif mnum == 11:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1fekjbT25drRuRy_2F0nUZbIjwWGZsYtJ")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(novemberid)
     elif mnum == 12:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys("1yJ_5BGZRq1cw3Ihx48TxpiX77w--yFkO")
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(decemberid)
     driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt4"]').click()
     # try:
     #     element = WebDriverWait(driver, 3600).until(
