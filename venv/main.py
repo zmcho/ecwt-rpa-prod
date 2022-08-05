@@ -170,8 +170,9 @@ driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_Rich
 time.sleep(1)
 driver.find_element(By.XPATH, '//*[@href="PDFUploading.aspx?(Not.Licensed.For.Production)="]').click()
 # driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt56_block_wtMenuSubItems_wt87"]').click()  # PROD
-
+###TO EDIT###
 driver.find_element(By.XPATH, '//*[@data-identifier="zmcho@globe.com.ph"]').click()
+####
 driver.find_element(By.XPATH, '//*[@id="submit_approve_access"]/div/button').click()
 
 # PDF Uploading
