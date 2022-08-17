@@ -13,21 +13,21 @@ from datetime import datetime
 from tkinter import *
 
 ######################TO EDIT###########################################
-chrome_path = r'user-data-dir=C:\Users\Snow\AppData\Local\Google\Chrome\User Data'
-chrome_profile = '--profile-directory=Profile 5'
+chrome_path = r'user-data-dir=C:\Users\default.DESKTOP-N05I6I4\AppData\Local\Google\Chrome\User Data'
+chrome_profile = '--profile-directory=Profile 1'
 ##Google Drive###
-januaryid = '1y1g2H2XHSjhkFFGpQaNpTQ_vwBb9blrI'
-februaryid = '1fA7egtwsI4ldtIOuPxZ_H9P7NzSOZ1jS'
-marchid = '1A7oYNgBP2BSaPBWXnG4qRpAf1B49fNhm'
-aprilid = '1FTpLiSi7OC5l-IvhDBwwMY60RUdT3yRW'
-mayid = '1iAZEbg_ynGKB6jch8iRvKaMBgrEY0jF7'
-juneid = '1EH06vdzs3VeLPmEbZUMakYl2sGT8EE9z'
-julyid = '1DLvEG8Uz1yP56SEUi28rDzeDPGaaUdtg'
-augustid = '1uU3XKt05whmSY0OgTtS6Z1dAGMLCtLID'
-septemberid = '1VnBupVcr2-WCa4O9noxiMCFKeuA3F5_q'
-octoberid = '17UR_zrbVYuROj1CAbpRvg8WD9AuMC26C'
-novemberid = '1fekjbT25drRuRy_2F0nUZbIjwWGZsYtJ'
-decemberid = '1yJ_5BGZRq1cw3Ihx48TxpiX77w--yFkO'
+januaryid = '16NagReBAcnNI0pQZP6QVQBzhSJtXMDoV'
+februaryid = '1hajPgONDdwHhzOHE-x9LAIxtReRsfH77'
+marchid = '1YsXs92EE3-4gKhkx8SSiR1hXrxraaFuo'
+aprilid = '1727PKtqIFr9RkBMMD-D1pyV1HMBR8TnT'
+mayid = '1PQIlIAWnoCNSpnjP0h3h9Tr6DnbD8Wak'
+juneid = '1BXYtOOXi2UYvFk9CDtvXCZiI0vvP30D_'
+julyid = '1gs4AR2ToEXD8v0GwxplX6ezlpqvxIS0w'
+augustid = '14lBggDdPPDImqpWIQWqzJ5LUOh8kioct'
+septemberid = '1PisqaYqnb_9CgkhbN8e3mhi0DM0yrG_k'
+octoberid = '1McJGs3dPX1--4nT1HbuKDu9ol9Vk6pnq'
+novemberid = '1TzzCF_iQPH0dTqj49oiDOYTEh4nRycux'
+decemberid = '133i0_5M3RxBBczb0ehcS7aRDi_SV6FsW'
 ########################################################################
 month = []
 year = []
@@ -147,8 +147,8 @@ window.mainloop()
 ##WEB AUTOMATION##
 print(custom)
 print("START: " + str(datetime.now()))
-url = 'https://globetelecominc-tst.outsystemsenterprise.com/eCWT_Portal/Login_SSO.aspx'
-# url = 'https://ecwt.globe.com.ph/portal/Login_SSO.aspx' #PROD
+# url = 'https://globetelecominc-tst.outsystemsenterprise.com/eCWT_Portal/Login_SSO.aspx'
+url = 'https://ecwt.globe.com.ph/portal/Login_SSO.aspx' #PROD
 
 options = Options()
 options.add_experimental_option("detach", True)
@@ -165,13 +165,13 @@ driver.find_element(By.XPATH, '//*[@id="wt1"]/div/div[2]').click()
 # Navigation
 time.sleep(1)
 driver.implicitly_wait(60)
-driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt55_block_wtMenuItem_wt132"]').click()
-# driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt56_block_wtMenuItem_wt124"]').click()  # PROD
+# driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt55_block_wtMenuItem_wt132"]').click()
+driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt55_block_wtMenuItem_wt132"]').click()  # PROD
 time.sleep(1)
-driver.find_element(By.XPATH, '//*[@href="PDFUploading.aspx?(Not.Licensed.For.Production)="]').click()
-# driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt56_block_wtMenuSubItems_wt87"]').click()  # PROD
+# driver.find_element(By.XPATH, '//*[@href="PDFUploading.aspx?(Not.Licensed.For.Production)="]').click()
+driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt207_block_wtMenu_wt109_RichWidgets_wt55_block_wtMenuSubItems_wt87"]').click()  # PROD
 ###TO EDIT###
-driver.find_element(By.XPATH, '//*[@data-identifier="zmcho@globe.com.ph"]').click()
+driver.find_element(By.XPATH, '//*[@data-identifier="zmcmorales@globe.com.ph"]').click()
 ####
 driver.find_element(By.XPATH, '//*[@id="submit_approve_access"]/div/button').click()
 
