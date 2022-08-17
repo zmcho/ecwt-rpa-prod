@@ -251,6 +251,8 @@ while loop != len(month):
         root.configure(bg='#1C3D80')
         root.eval('tk::PlaceWindow . center')
         display_on()
+    else:
+        display_reset()
     try:
         # element = WebDriverWait(driver, 3600).until(
         #     #EC.visibility_of_element_located((By.XPATH, '//*/span[text()="An exception occurred in the client script. Error: The connection to the server was reset. Server returned status Internal Server Error"]'))
@@ -267,12 +269,11 @@ while loop != len(month):
             )
         except:
             start = 1
-            display = 1
-            display_reset()
         else:
             loop = loop + 1
         finally:
             pass
+display = 1
 print("END: " + str(datetime.now()))
 driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMenu_wt76_wt9_wtLogoutLink"]').click()
 driver.quit()
