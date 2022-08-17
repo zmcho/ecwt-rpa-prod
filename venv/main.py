@@ -7,6 +7,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import easygui
 
+import ctypes
+import sys
+
 import calendar
 import time
 from datetime import datetime
@@ -38,7 +41,7 @@ error = 0
 start = 0
 custom = 0
 loop = 0
-
+display = 0
 
 def byquarter1():
     global month
@@ -127,6 +130,16 @@ def bymonth():
     mwindow.eval('tk::PlaceWindow . center')
     mwindow.geometry("250x300")
     mwindow.configure(bg='#1C3D80')
+
+def display_on():
+    global root
+    print("Always On")
+    ctypes.windll.kernel32.SetThreadExecutionState(0x80000002)
+    root.iconify()
+
+def display_reset():
+    ctypes.windll.kernel32.SetThreadExecutionState(0x80000000)
+    sys.exit(0)
 
 ##DIALOG BOX MAIN##
 global window
@@ -230,6 +243,14 @@ while loop != len(month):
     # finally:
     #     loop=loop-1
     #     pass
+    if display == 0:
+        print("Display on")
+        root = Tk()
+        root.geometry("200x60")
+        root.title("Display App")
+        root.configure(bg='#1C3D80')
+        root.eval('tk::PlaceWindow . center')
+        display_on()
     try:
         # element = WebDriverWait(driver, 3600).until(
         #     #EC.visibility_of_element_located((By.XPATH, '//*/span[text()="An exception occurred in the client script. Error: The connection to the server was reset. Server returned status Internal Server Error"]'))
@@ -246,6 +267,8 @@ while loop != len(month):
             )
         except:
             start = 1
+            display = 1
+            display_reset()
         else:
             loop = loop + 1
         finally:
