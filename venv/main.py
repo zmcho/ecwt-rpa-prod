@@ -12,7 +12,7 @@ import time
 from datetime import datetime
 from tkinter import *
 
-######################TO EDIT###########################################a
+######################TO EDIT###########################################
 chrome_path = r'user-data-dir=C:\Users\default.DESKTOP-N05I6I4\AppData\Local\Google\Chrome\User Data'
 chrome_profile = '--profile-directory=Profile 1'
 ##Google Drive###
