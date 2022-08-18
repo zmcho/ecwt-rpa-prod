@@ -239,14 +239,10 @@ while loop != len(month):
         driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt94_block_wtMainContent_WebPatterns_wt104_block_wtColumn1_wtDateStart"]').send_keys(str(date.year) + "-" + str(mnum) + "-01")
         driver.find_element(By.XPATH,'//*[@id="LisbonTheme_wt94_block_wtMainContent_WebPatterns_wt104_block_wtColumn2_wtDateEnd"]').send_keys(str(date.year) + "-" + str(mnum) + "-" + str(calendar.monthrange(date.year, mnum)[1]))
     driver.implicitly_wait(60)
-    driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt65"]').click()
     time.sleep(5)
-    if start == 0:
-        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt68"]').click()
-        time.sleep(5)
     if globe == 1:
         driver.find_element(By.XPATH, '//*[@value="Globe"]').click()
-        time.sleep(1)
+        time.sleep(3)
         driver.implicitly_wait(60)
         driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').clear()
         if mnum == 1:
@@ -275,7 +271,7 @@ while loop != len(month):
             driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(decemberid)
     if innove == 1:
         driver.find_element(By.XPATH, '//*[@value="Innove"]').click()
-        time.sleep(1)
+        time.sleep(3)
         driver.implicitly_wait(60)
         driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').clear()
         if mnum == 1:
@@ -302,6 +298,11 @@ while loop != len(month):
             driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(novemberidinnove)
         elif mnum == 12:
             driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(decemberidinnove)
+    driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt65"]').click()
+    time.sleep(5)
+    if start == 0:
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt68"]').click()
+        time.sleep(5)
     driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt4"]').click()
     # try:
     #     element = WebDriverWait(driver, 3600).until(
