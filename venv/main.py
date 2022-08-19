@@ -44,6 +44,19 @@ septemberidinnove = '1WWSurH5la4BQtZ17UbkwCO5OsuIjVfKS'
 octoberidinnove = '14hcoUg_59lfKpLyBwsAIelzwyXN9KsYT'
 novemberidinnove = '1LKvSbqBtee144luas2lI22DjH6X-gHy4'
 decemberidinnove = '1USptGsjcj_SSkRNV5IHO8_OvzSaTnqik'
+##BAYAN Google Drive###
+januaryidbayan = '1607fb6NleYFyGqfaA922xeen0v963MHi'
+februaryidbayan = '1fA7egtwsI4ldtIOuPxZ_H9P7NzSOZ1jS'
+marchidbayan = '1A7oYNgBP2BSaPBWXnG4qRpAf1B49fNhm'
+aprilidbayan = '1FTpLiSi7OC5l-IvhDBwwMY60RUdT3yRW'
+mayidbayan = '1iAZEbg_ynGKB6jch8iRvKaMBgrEY0jF7'
+juneidbayan = '1EH06vdzs3VeLPmEbZUMakYl2sGT8EE9z'
+julyidbayan = '1DLvEG8Uz1yP56SEUi28rDzeDPGaaUdtg'
+augustidbayan = '1uU3XKt05whmSY0OgTtS6Z1dAGMLCtLID'
+septemberidbayan = '1VnBupVcr2-WCa4O9noxiMCFKeuA3F5_q'
+octoberidbayan = '17UR_zrbVYuROj1CAbpRvg8WD9AuMC26C'
+novemberidbayan = '1fekjbT25drRuRy_2F0nUZbIjwWGZsYtJ'
+decemberidbayan = '1yJ_5BGZRq1cw3Ihx48TxpiX77w--yFkO'
 ########################################################################
 month = []
 year = []
@@ -57,6 +70,7 @@ loop = 0
 display = 0
 globe = 0
 innove = 0
+bayan = 0
 
 def byquarter1():
     global month
@@ -148,12 +162,22 @@ def bymonth():
             mwindow.destroy()
             window.destroy()
             iwindow.destroy()
+        def bayan():
+            global bayan
+            bayan = 1
+            mwindow.destroy()
+            window.destroy()
+            iwindow.destroy()
 
         iwindow = Tk()
         btnglobe = Button(iwindow, text="Globe", command=globe)
         btnglobe.place(x=50, y=100)
         btninnove = Button(iwindow, text="Innove", command=innove)
-        btninnove.place(x=170, y=100)
+        btninnove.place(x=120, y=100)
+        btninnove = Button(iwindow, text="Bayan", command=bayan)
+        btninnove.place(x=190, y=100)
+        lbl2 = Label(iwindow, text="Select Payee:", fg='white', font=("Helvetica", 14), bg='#1C3D80')
+        lbl2.place(x=20, y=50)
         iwindow.title('eCWT')
         iwindow.geometry("300x200")
         iwindow.configure(bg='#1C3D80')
@@ -298,6 +322,35 @@ while loop != len(month):
             driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(novemberidinnove)
         elif mnum == 12:
             driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(decemberidinnove)
+    if bayan == 1:
+        driver.find_element(By.XPATH, '//*[@value="Bayan"]').click()
+        time.sleep(1)
+        driver.implicitly_wait(60)
+        driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').clear()
+        if mnum == 1:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(januaryidbayan)
+        elif mnum == 2:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(februaryidbayan)
+        elif mnum == 3:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(marchidbayan)
+        elif mnum == 4:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(aprilidbayan)
+        elif mnum == 5:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(mayidbayan)
+        elif mnum == 6:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(juneidbayan)
+        elif mnum == 7:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(julyidbayan)
+        elif mnum == 8:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(augustidbayan)
+        elif mnum == 9:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(septemberidbayan)
+        elif mnum == 10:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(octoberidbayan)
+        elif mnum == 11:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(novemberidbayan)
+        elif mnum == 12:
+            driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt46"]').send_keys(decemberidbayan)
     driver.find_element(By.XPATH, '//*[@id="LisbonTheme_wt94_block_wtMainContent_wt65"]').click()
     time.sleep(5)
     if start == 0:
